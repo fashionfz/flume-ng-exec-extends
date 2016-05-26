@@ -269,9 +269,10 @@ public class Log4jExecSource extends AbstractSource implements EventDrivenSource
 									}
 									read.setLength(0);
 								}
-							}else{
+							}else if(write.length() > 0){
 								write.append("\n"+line);
 							}
+							//放弃错误数据
 						}
 					}
 
